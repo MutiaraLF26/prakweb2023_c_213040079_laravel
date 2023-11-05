@@ -7,10 +7,9 @@
     @foreach ($posts as $post)
         <article class="mb-">
             <h2>
-                <a href="/posts/"{{ $posts["slug"] }}> </a>
+                <a href="/posts/"{{ $post->id }}>{{$post->title}} </a>
             </h2>
-            <h5>{{ $post["body"]}}></h5>
-            <p>{{ $post["body"] }}</p>
+            <p>{{ $post->excerpt }}</p>
         </article>
     @endforeach
 
