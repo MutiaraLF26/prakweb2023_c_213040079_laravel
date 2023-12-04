@@ -24,6 +24,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('home', [
         "active" => "home",
+        "title" => "Home"
     ]);
 });
 
@@ -37,7 +38,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/blog', [PostController::class, 'index']);
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', function(){
